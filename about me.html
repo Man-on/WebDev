@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ELEVATE - About Me</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar Placeholder -->
+    <div id="navbar-container"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-container').innerHTML = data;
+                    
+                    // Ensure Bootstrap's JavaScript is applied after loading the navbar
+                    const script = document.createElement('script');
+                    script.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js";
+                    document.body.appendChild(script);
+                });
+        });
+    </script>
+
+    <!-- Main Content -->
+    <section class="container mt-5">
+        <h2>Meet the Founder</h2>
+        <p>ELEVATE was founded with the belief that business attire should be both stylish and comfortable, empowering professionals to perform at their best.</p>
+
+        <h3>Inspiration Behind ELEVATE</h3>
+        <p>It all started when our founder, Christian Man-on, noticed a gap in the market—business attire was either too stiff and uncomfortable or too casual for a professional setting. 
+           While working long hours in a corporate job, Christian realized that confidence starts with how you dress. 
+           With a vision to redefine business fashion, ELEVATE was born—offering premium-quality clothing that blend elegance, comfort, and professionalism.</p>
+
+        <p>“A sharp mind deserves a sharp look. When you feel good in what you wear, success follows.” — Christian Man-on, Founder of ELEVATE.</p>
+    </section>
+
+</body>
+</html>
